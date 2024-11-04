@@ -5,4 +5,4 @@ run:
 
 build:
 	mkdir -p bin
-	go build -tags "json1 sqlite3" -o bin/focalboard-app
+	env GOOS=linux GOARCH=arm64 go build -tags "json1 sqlite3" -o bin/focalboard-app
