@@ -44,7 +44,10 @@ jobs:
 
     - name: apt-get install -y libwebkit2gtk-4.0-dev
       run: sudo apt-get install -y libwebkit2gtk-4.0-dev
-
+      
+    - name: apt-get install -y g++-arm-linux-gnueabi gcc-arm-linux-gnueabi
+      run: sudo apt-get install -y g++-arm-linux-gnueabi gcc-arm-linux-gnueabi
+      
     - name: Build Linux server and app
       run: cd focalboard; make server-linux-package linux-app
       env:
