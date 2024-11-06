@@ -216,7 +216,7 @@ linux-app: webapp ## Build Linux application.
 	cp NOTICE.txt linux/temp/focalboard-app/
 	cp webapp/NOTICE.txt linux/temp/focalboard-app/webapp-NOTICE.txt
 	cp -R webapp/pack linux/temp/focalboard-app/pack
-	cd linux; make build
+	cd linux;make clean; make build
 	cp -R linux/bin/focalboard-app linux/temp/focalboard-app/
 	cd linux/temp; tar -zcf ../dist/focalboard-linux.tar.gz focalboard-app
 	rm -rf linux/temp
